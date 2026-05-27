@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Beautiful Page</title>
+    <title>Dev Info</title>
     <style>
-        /* CSS: This is the "Paint" of your house */
+       
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             margin: 0;
-            background-color: #121212; /* Dark background */
-            color: #e0e0e0; /* Light text */
+            background-color: #000000; /* Dark background */
+            color: #ffffff; 
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -23,13 +23,13 @@
             max-width: 800px;
             padding: 2rem;
             text-align: center;
-            background: #1e1e1e;
+            background: #000000;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 30px rgba(132, 90, 201, 0.5);
         }
 
         h1 {
-            color: #bb86fc; /* Accent purple */
+            color: #bb86fc; 
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
         }
@@ -43,7 +43,7 @@
             display: inline-block;
             margin-top: 20px;
             padding: 12px 24px;
-            background-color: #03dac6; /* Teal button */
+            background-color: #eceeee; 
             color: #000;
             text-decoration: none;
             border-radius: 5px;
@@ -52,7 +52,7 @@
         }
 
         .btn:hover {
-            background-color: #018786;
+            background-color: #ffffff;
             transform: translateY(-2px);
         }
 
@@ -64,16 +64,69 @@
     </style>
 </head>
 <body>
+    
 
     <div class="container">
-        <h1>Welcome to My Space</h1>
-        <p>This is a basic HTML structure styled with modern CSS. It uses a dark theme, clean typography, and a responsive container to look great on both phones and desktops.</p>
+        <h1>Dev Profile</h1>
+        -----------------------------------------------------
+        <br>
+
+        <img src="images\dev.jpg" width =150 hight =100>
         
-        <a href="#" class="btn">Explore My Work</a>
+        <div style="position: relative; background: #1e1e1e; border-radius: 8px; padding: 15px; font-family: monospace; max-width: 600px;">
+    
+    <button id="copyBtn" onclick="copyCode()" style="position: absolute; top: 10px; right: 10px; padding: 6px 12px; background: #444; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px;">
+        Copy
+    </button>
+
+    <pre style="margin: 0; color: #dcdcdc; overflow-x: auto;"><code id="codeContent">
+Nihan Mahmood
+Add:Rangpur,Bangladesh🇧🇩
+Mob:+88013********
+Ema:c**********1@gmail.com
+
+
+
+    </code></pre>
+   
+    
+    
+</div>
+ <p>
+        Edu:rather not say<br>
+        Age:16<br>
+        Gen:male<br>
+        .cpp,.css,.html,.js,.java,.py,.cleo,.c,.lua etc<br>
+        </p>
+        
+        <br>
+
+<script>
+    async function copyCode() {
+        const code = document.getElementById('codeContent').innerText.trim();
+        const btn = document.getElementById('copyBtn');
+        
+        try {
+            await navigator.clipboard.writeText(code);
+            btn.innerText = "Copied!";
+            btn.style.background = "#2e7d32"; // Success green
+            
+            setTimeout(() => {
+                btn.innerText = "Copy";
+                btn.style.background = "#444";
+            }, 2000);
+        } catch (err) {
+            alert("Failed to copy code.");
+        }
+    }
+</script>
+        
+        <a href="#" class="btn">Donate 300$</a>
     </div>
 
     <footer>
-        &copy; 2026 Crafted with Gemini
+        &copy; nihan_mahmood<br>
+        Software Developer | Tuff Gamer | Open Source Contributor
     </footer>
 
 </body>
